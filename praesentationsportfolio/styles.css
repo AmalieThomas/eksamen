@@ -164,14 +164,10 @@ ol{
     padding-top: 75px;
 }
 
-.main-grid-container>*{
-    border: var(--lilla) solid 2px;
-}
-
 /*første afsnit*/
 
 .intro>*{
-    border: var(--orange) solid 2px;
+    border: var(--sort) solid 2px;
     margin: 0;
     padding: 15px;
 }
@@ -226,29 +222,31 @@ ol{
 }
 
 .mellemrum{
-    background-color: var(--primary-color);
     height: 50px;
     width: auto;
 }
 
+.lille-mellemrum{
+    height: 25px;
+    width: auto;
+}
 /*andet afsnit*/
 
 .udfordringer{
     background-color: var(--sort);
     color: var(--primary-color);
     margin: 0;
-    border: solid 2px var(--sort);
     display: grid;
 }
 
 .udfordringer>*{
-    padding: 15px;
+    padding: 20px;
     margin: 0;
 }
 
 .udfordringer>h2{
-    border-bottom: var(--primary-color) solid 2px;
     box-shadow: 0px 5px var(--primary-color);
+    border: var(--primary-color) solid 2px;
 }
 
 .udfordringer>ol{
@@ -306,6 +304,98 @@ ol{
 }
 
 
+/* fjerde afsnit*/
+
+.service{
+    color: #FBFCED;
+}
+
+.service-grid{
+    border: var(--sort) solid 2px;
+}
+
+.service>h2{
+    background-color: var(--sort);
+    padding: 20px;
+    margin: 0;
+    border: solid 2px var(--primary-color);
+    border-bottom: var(--primary-color) solid 5px;
+}
+
+.next_step{
+    background-color: var(--sort);
+    list-style: none;
+    padding:20px;
+    margin: 0;
+}
+
+.kasser{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: var(--sort);
+    height: auto;
+    background-color: #FBFCED;
+}
+
+.kasser>*{
+    border: var(--sort) solid 2px;
+}
+
+.kasse1, .kasse2, .kasse3{
+    height: auto;
+    width: auto;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    justify-content: space-around;
+    box-shadow: 0px 5px var(--sort) ;
+}
+
+.kasse1{
+    background-color: var(--lilla);
+}
+
+.kasse2{
+    background-color: var(--orange);
+}
+
+.kasse3{
+    background-color: var(--green);
+}
+
+.printer{
+    padding-left: 10px;
+}
+.hjemmeside{
+    padding-left: 10px;
+}
+
+
+.kontakt-flex{
+    display: flex;
+    justify-content: center;
+}
+
+.kontakt{
+    background-color: var(--orange);
+    border: var(--sort) solid 2px;
+    padding: 20px;
+    border-radius: 40px;
+    color: var(--sort);
+    text-decoration: none;
+    font-size: var(--fs-s);
+    font-weight: 600;
+    margin: 10px;
+    box-shadow: 0px 5px var(--sort);
+}
+
+.kontakt:hover{
+    background-color: var(--lilla);
+    text-decoration: underline;
+}
 
 
 
@@ -372,6 +462,25 @@ ol{
 
     .projekt1, .projekt2, .projekt3, .projekt4, .projekt5, .projekt6{
         max-width: 350px;
+    }
+
+    .service-grid{
+        display: grid;
+        grid-template: 
+        'tekst kasser kasser';
+    }
+
+    .next_step{
+        grid-area: tekst;
+    }
+
+    .kasser{
+        grid-area: kasser;
+    }
+
+    .kasse1, .kasse2, .kasse3{
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .footer{
