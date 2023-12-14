@@ -351,20 +351,22 @@ ol{
     padding-bottom: 10px;
     padding-left: 5px;
     padding-right: 5px;
-    box-shadow: 0px 5px var(--sort) ;
     align-items: center;
 }
 
 .kasse1{
     background-color: var(--lilla);
+    box-shadow: 0px 5px var(--sort) ;
 }
 
 .kasse2{
     background-color: var(--orange);
+    box-shadow: 0px 5px var(--sort) ;
 }
 
 .kasse3{
     background-color: var(--green);
+    
 }
 
 .printer, .hjemmeside, .logodesign{
@@ -387,7 +389,8 @@ ol{
     text-decoration: none;
     font-size: var(--fs-s);
     font-weight: 600;
-    margin: 10px;
+    margin: 20px;
+    margin-top: 15px;
     box-shadow: 0px 5px var(--sort);
 }
 
@@ -396,6 +399,64 @@ ol{
     text-decoration: underline;
 }
 
+
+/* om mig*/
+
+.om-mig-main{
+    padding-top: 25px;
+    border: var(--sort) solid 2px;
+    margin-bottom: 200px;
+}
+
+.om-mig-overskrift{
+    border: var(--sort) solid 2px;
+    margin-bottom: 0;
+    padding: 15px;
+}
+
+.om-mig-tekst{
+    padding: 15px;
+    padding-bottom: 0;
+    border: var(--sort) solid 2px;
+}
+
+.om-mig-main>.container{
+    width: auto;
+    border-bottom: var(--sort) solid 2px;
+}
+
+.om-mig-main>.container>img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.skills-overskrift{
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+}
+
+.skill-flex{
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: var(--sort) solid 2px;
+    padding-bottom: 20px;
+}
+
+.skill-flex>*{
+    border: var(--sort) solid 2px;
+    padding: 15px;
+    border-radius: 40px;
+    color: var(--sort);
+    font-size: var(--fs-s);
+    font-weight: 600;
+    margin: 5px;
+    box-shadow: 0px 5px var(--sort) ;
+}
 
 
 /*footer*/
@@ -436,7 +497,7 @@ ol{
     .item1{grid-area: header;}
     .item2{grid-area: overskrift;}
     .item3{grid-area: tekst;}
-    .container{grid-area: billede;}
+    .intro>.container{grid-area: billede;}
     .flex-container {grid-area: knapper;}
 
     .intro{
@@ -482,6 +543,32 @@ ol{
         padding-right: 20px;
     }
 
+
+    .om-mig-main{
+        margin: 0px 100px; 
+        display: grid;
+        grid-gap: 0px;
+        grid-template: 
+        'om-mig om-mig'
+        'skrift foto'
+        'skills-header skills-header'
+        'skills skills';
+    }
+
+    .om-mig-overskrift{grid-area: om-mig;}
+    .om-mig-tekst{grid-area: skrift;}
+    .om-mig-main>.container{grid-area: foto;}
+    .skills-overskrift{grid-area: skills-header;}
+    .skill-flex {grid-area: skills;}
+
+    .skills-overskrift{
+        text-align:left;
+    }
+
+    .skill-flex{
+        justify-content: flex-start;
+    }
+
     .footer{
         flex-direction: row;
     }
@@ -497,7 +584,7 @@ ol{
 }
 
 
-@media (min-width: 700px) {
+@media (min-width: 1000px) {
 
     .header li{
     float:left;
