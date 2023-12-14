@@ -283,16 +283,16 @@ ol{
     object-fit: cover;
 }
 
-.projekt1, .projekt3{
+.projekt2, .projekt4{
     background-color: var(--green);
 }
 
-.projekt4, .projekt6{
+.projekt1, .projekt6{
     background-color: var(--sort);
     color: var(--primary-color);
 }
 
-.projekt2, .projekt5{
+.projekt3, .projekt5{
     background-color: var(--lilla);
 }
 
@@ -346,12 +346,13 @@ ol{
     height: auto;
     width: auto;
     display: flex;
+    flex: 1;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 5px;
     padding-right: 5px;
-    justify-content: space-around;
     box-shadow: 0px 5px var(--sort) ;
+    align-items: center;
 }
 
 .kasse1{
@@ -366,13 +367,11 @@ ol{
     background-color: var(--green);
 }
 
-.printer{
-    padding-left: 10px;
+.printer, .hjemmeside, .logodesign{
+    padding: 10px;
+    padding-right: 15px;
+    margin-left: auto;
 }
-.hjemmeside{
-    padding-left: 10px;
-}
-
 
 .kontakt-flex{
     display: flex;
