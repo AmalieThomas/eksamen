@@ -513,10 +513,22 @@ input[type=text], select, textarea {
     cursor: pointer;
   }
 
-  .container {
+  .main-kontakt>.container {
     background-color: #FBFCED;
     padding: 0;
     margin: 20px;
+  }
+
+  .kontaktinfo{
+    border: var(--sort) solid 2px;
+    display: grid;
+  }
+
+  .kontaktinfo>*{
+    border: var(--sort) solid 2px;
+    margin:0;
+    padding: 15px;
+    text-align: center;
   }
 
 
@@ -635,6 +647,29 @@ input[type=text], select, textarea {
         border: solid var(--sort) 2px;
         margin-left: 100px;
         margin-right: 100px;
+    }
+
+    .kontaktinfo{
+        grid-template:
+        'k n'
+        'k e';
+    }
+    
+    .k{
+        grid-area: k;
+        text-align: left;
+        display: flex;
+        align-items: center;
+    }
+
+    .n{
+        grid-area: n;
+        text-align: left;
+    }
+
+    .e{
+        grid-area: e;
+        text-align: left;
     }
 
     .footer{
