@@ -162,7 +162,7 @@ ol{
     grid-template-rows: auto;
     background-color: var(--primary-color);
     border: var(--sort) solid 2px;
-    padding-top: 75px;
+    padding-top: 70px;
 }
 
 /*første afsnit*/
@@ -207,7 +207,7 @@ ol{
     border-radius: 40px;
     color: var(--sort);
     text-decoration: none;
-    font-size: var(--fs-s);
+    font-size: var(--fs-b);
     font-weight: 600;
     margin: 10px;
     box-shadow: 0px 5px var(--sort) ;
@@ -291,6 +291,7 @@ ol{
 
 .projekt2, .projekt4{
     background-color: var(--green);
+    color: var(--sort);
 }
 
 .projekt1, .projekt6{
@@ -300,13 +301,19 @@ ol{
 
 .projekt3, .projekt5{
     background-color: var(--lilla);
+    color: var(--sort);
 }
 
-.projekt-flex>div>p{
+.projekt-flex>a>p{
     height: auto;
     width: auto;
     padding: 20px;
     font-size: var(--fs-b);
+    padding: 15;
+}
+
+.projekt-flex>a{
+    text-decoration: none;
 }
 
 
@@ -393,7 +400,7 @@ ol{
     border-radius: 40px;
     color: var(--sort);
     text-decoration: none;
-    font-size: var(--fs-s);
+    font-size: var(--fs-b);
     font-weight: 600;
     margin: 20px;
     margin-top: 15px;
@@ -467,7 +474,7 @@ ol{
 
 /*kontakt*/
 .main-kontakt{
-    padding-top: 60px;
+    padding-top: 70px;
 }
 
 .main-kontakt>h1{
@@ -496,7 +503,7 @@ input[type=text], select, textarea {
     border-radius: 40px;
     color: var(--sort);
     text-decoration: none;
-    font-size: var(--fs-s);
+    font-size: var(--fs-b);
     font-weight: 600;
     margin-top: 15px;
     box-shadow: 0px 5px var(--sort);
@@ -531,6 +538,73 @@ input[type=text], select, textarea {
     text-align: center;
   }
 
+/*projekt side*/
+
+.main-projekter {
+    border: var(--sort) solid 2px;
+    padding-top: 70px;
+}
+
+.main-projekter>h1{
+    box-shadow: 0px 5px var(--sort) ;
+}
+
+.main-projekter>h1, h2{
+    border: var(--sort) solid 2px;
+    margin: 0;
+    padding: 15px;
+}
+
+.projekter-grid1>*{
+    border: var(--sort) solid 2px;
+    margin: 0;
+    padding: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.projekter-grid1>p{
+    border: 0;
+}
+
+.projekter-grid1{
+    border: var(--sort) solid 2px;
+}
+
+.projekter-grid1>.container{
+    width: auto;
+}
+
+.projekter-grid1>.container>img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.projekter-grid2>*{
+    border: var(--sort) solid 2px;
+    margin: 0;
+    padding: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.projekter-grid2>p{
+    border: 0;
+}
+
+.projekter-grid2{
+    border: var(--sort) solid 2px;
+}
+
+.projekter-grid2>.container{
+    width: auto;
+}
+
+.projekter-grid2>.container>img{
+    width: 100%;
+    object-fit: cover;
+}
+
 
 /*footer*/
 
@@ -552,6 +626,7 @@ input[type=text], select, textarea {
 }
 .ikoner>*{
     padding: 2px;
+    color: #FBFCED;
 }
 .nummer{
     order: -1;
@@ -560,8 +635,15 @@ input[type=text], select, textarea {
 
 /*media*/
 
-
 @media only screen and (min-width:1000px){
+
+    :root{
+        --fs-l: 2.8rem;
+        --fs-m: 1.90rem;
+        --fs-s: 1.15rem;
+        --fs-xs: 0.8rem;
+        --fs-b: 1.5rem;
+    }
 
     .main-grid-container{
         margin: 0px 100px;    
@@ -642,8 +724,7 @@ input[type=text], select, textarea {
         justify-content: flex-start;
     }
 
-    .main-kontakt
-    {
+    .main-kontakt{
         border: solid var(--sort) 2px;
         margin-left: 100px;
         margin-right: 100px;
@@ -670,6 +751,38 @@ input[type=text], select, textarea {
     .e{
         grid-area: e;
         text-align: left;
+    }
+
+    .main-projekter{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    .projekter-grid1>p{
+        font-size: var(--fs-b);
+    }
+
+    .projekter-grid2>p{
+        font-size: var(--fs-b);
+    }
+
+    .projekter-grid1{
+        display: flex;
+        justify-content: right; 
+    }
+
+    .projekter-grid2{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: left; 
+    }
+
+    .projekter-grid1>.container{
+        max-width: 400px;
+    }
+
+    .projekter-grid2>.container{
+        max-width: 400px;
     }
 
     .footer{
