@@ -44,12 +44,12 @@ p{
 }
 
 ul{
-    line-height: 2;
+    line-height: 2.5;
     font-size: var(--fs-s);
 }
 
 ol{
-    line-height: 2;
+    line-height: 2.5;
     font-size: var(--fs-s);
     font-style: italic;
 }
@@ -181,6 +181,11 @@ ol{
     box-shadow: 0px 5px var(--sort);
 }
 
+.intro>div>ul{
+    font-style: italic;
+    font-weight: 500;
+}
+
 .intro>.container{
     width: auto;
     border: 0;
@@ -189,10 +194,6 @@ ol{
 .intro>.container>img{
     width: 100%;
     object-fit: cover;
-}
-
-.intro>article>ul{
-    font-style: italic;
 }
 
 .flex-container{
@@ -211,6 +212,7 @@ ol{
     font-weight: 600;
     margin: 10px;
     box-shadow: 0px 5px var(--sort) ;
+    text-align: center;
 }
 
 .flex-container>a{
@@ -257,7 +259,9 @@ ol{
 
 .udfordringer>ol{
     list-style-position: inside;
-    margin-left: 20px;
+    font-weight: 500;
+    background-color: #DFF49F;
+    color: #16161C;
 }
 
 /*tredje afsnit*/
@@ -271,8 +275,7 @@ ol{
 .projekt-flex{
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    cursor: pointer;
+    padding: 20px;   
 }
 
 .projekt-flex>*{
@@ -309,11 +312,15 @@ ol{
     width: auto;
     padding: 20px;
     font-size: var(--fs-b);
-    padding: 15;
 }
 
 .projekt-flex>a{
     text-decoration: none;
+}
+
+.projekt-flex>a:hover{
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 
@@ -349,6 +356,18 @@ ol{
     color: var(--sort);
     height: auto;
     background-color: #FBFCED;
+}
+
+.kasse1 >h3{
+    font-size: 1.3rem;
+}
+
+.kasse2 >h3{
+    font-size: 1.3rem;
+}
+
+.kasse3 >h3{
+    font-size: 1.3rem;
 }
 
 .kasser>*{
@@ -681,16 +700,15 @@ input[type=text], select, textarea {
 
     .service-grid{
         display: grid;
-        grid-template: 
-        'tekst kasser kasser';
+        grid-template-columns: auto auto auto auto;
     }
 
     .next_step{
-        grid-area: tekst;
+        grid-column: 1 / 3;
     }
 
     .kasser{
-        grid-area: kasser;
+        grid-column: 4 / -1;
     }
 
     .kasse1, .kasse2, .kasse3{
@@ -698,6 +716,17 @@ input[type=text], select, textarea {
         padding-right: 20px;
     }
 
+    .kasse1 >h3{
+        font-size: var(--fs-m);
+    }
+    
+    .kasse2 >h3{
+        font-size: var(--fs-m);
+    }
+    
+    .kasse3 >h3{
+        font-size: var(--fs-m);
+    }
 
     .om-mig-main{
         margin: 0px 100px; 
